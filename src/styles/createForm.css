@@ -1,0 +1,15 @@
+/* .form-container{
+    display: flex;
+    flex-direction: column;
+}
+.form-inner{
+    display: flex;
+    justify-content: space-evenly;
+} */
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,200px);
+    align-self: flex-start;
+    justify-content: space-between;
+}
