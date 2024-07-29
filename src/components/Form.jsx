@@ -94,7 +94,7 @@ const Form = () => {
         </div>
        <div style={{display:'flex'}}>
 
-        <input style={{padding:'0.5rem 0.5rem',backgroundColor:'green',color:'white',cursor:'pointer', borderRadius : '0.5rem', margin:'0 auto',textAlign:'center' }} type="submit"/>
+        <input style={{width :'6rem',padding:'0.5rem 0.5rem',backgroundColor:'green',color:'white',cursor:'pointer', borderRadius : '0.5rem', margin:'0 auto',textAlign:'center' , cursor:'pointer' }} type="submit"/>
        </div>
        
       </form>

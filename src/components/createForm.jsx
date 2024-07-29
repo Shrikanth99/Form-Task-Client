@@ -113,17 +113,17 @@ const CreateForm = () => {
       ) ) }
         
 
-        {btnComp ? <button style={{padding:'0.5rem',backgroundColor:'white', color:'blue',borderRadius:'0.5rem' }}   onClick={handleBtns} >Close Input</button> : <button style={{padding:'0.5rem',backgroundColor:'white', color:'blue', borderRadius:'0.5rem' }}  onClick={handleBtns} >Add Input</button> }
+        {btnComp ? <button style={{padding:'0.5rem',backgroundColor:'white', color:'blue',borderRadius:'0.5rem', cursor:'pointer' }}   onClick={handleBtns} >Close Input</button> : <button style={{padding:'0.5rem',backgroundColor:'white', color:'blue', borderRadius:'0.5rem',cursor:'pointer' }}  onClick={handleBtns} >Add Input</button> }
 
         { btnComp && (<div style={{display:'flex',gap:'1rem'}}>
-        <button style={{padding:'0.5rem',backgroundColor:'#1876D2', color:'white', borderRadius : '0.5rem' }} onClick={() => addInput('text') } >Text</button>
-        <button style={{padding:'0.5rem',backgroundColor:'#1876D2', color:'white', borderRadius : '0.5rem' }} onClick={() => addInput('number')} >Number</button>
-        <button style={{padding:'0.5rem',backgroundColor:'#1876D2', color:'white', borderRadius : '0.5rem' }} onClick={() => addInput('email') } >  Email</button>
-        <button style={{padding:'0.5rem',backgroundColor:'#1876D2', color:'white', borderRadius : '0.5rem' }} onClick={() => addInput('password') } >Password</button>
-        <button style={{padding:'0.5rem',backgroundColor:'#1876D2', color:'white', borderRadius : '0.5rem' }} onClick={() => addInput('date') } >Date</button>
+        <button style={{padding:'0.5rem',backgroundColor:'#1876D2', color:'white', borderRadius : '0.5rem', cursor:'pointer' }} disabled={fields.length == 20} onClick={() => addInput('text') } >Text</button>
+        <button style={{padding:'0.5rem',backgroundColor:'#1876D2', color:'white', borderRadius : '0.5rem', cursor:"pointer" }} disabled={fields.length == 20} onClick={() => addInput('number')} >Number</button>
+        <button style={{padding:'0.5rem',backgroundColor:'#1876D2', color:'white', borderRadius : '0.5rem', cursor:'pointer' }} disabled={fields.length == 20} onClick={() => addInput('email') } >  Email</button>
+        <button style={{padding:'0.5rem',backgroundColor:'#1876D2', color:'white', borderRadius : '0.5rem', cursor:'pointer' }} disabled={fields.length == 20} onClick={() => addInput('password') } >Password</button>
+        <button style={{padding:'0.5rem',backgroundColor:'#1876D2', color:'white', borderRadius : '0.5rem', cursor:'pointer' }} disabled={fields.length == 20} onClick={() => addInput('date') } >Date</button>
         </div>)
         }
-     <button style={{padding:'0.5rem', backgroundColor:'#2E7D32', color:'white' , borderRadius : '0.5rem' }} onClick={handleSubmit} >Submit</button>
+     <button style={{padding:'0.5rem', backgroundColor:'#2E7D32', color:'white' , borderRadius : '0.5rem', cursor:'pointer' }} onClick={handleSubmit} >Submit</button>
         </div>
         <div style={{border:'1px solid grey',width:'20vw',display:'flex',flexDirection:'column',alignItems:'center',padding:'0.75rem 0',gap:'0.8rem'}}>
             <h4>Form Editor</h4>
@@ -139,7 +139,7 @@ const CreateForm = () => {
         </div>
        
       </div>
-      <button style={{padding:'0.5rem', backgroundColor:'#2E7D32', color:'white' , borderRadius : '0.5rem' }} onClick={() => navigate('/')} >Create-Form</button>
+      <button style={{padding:'0.5rem', backgroundColor:'#2E7D32', color:'white' , borderRadius : '0.5rem', cursor:'pointer' }} onClick={() => navigate('/')} >Create-Form</button>
     </div>
     
   )

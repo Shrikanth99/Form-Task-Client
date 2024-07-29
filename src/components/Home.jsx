@@ -1,10 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { startDeleteForm } from '../actions/forms-actions'
 
 const Home = () => {
+  const dispatch = useDispatch()
   const forms = useSelector(state => state.forms.forms)
   console.log(forms)
+
+  const handleBtn = (id) => {
+    // console.log('id',id)
+    dispatch(startDeleteForm(id))
+  }
 
   return (
     <div style={{maxWidth:'60%',margin:'0 auto'}}>
@@ -21,9 +28,9 @@ const Home = () => {
           return (<div key={el._id} style={{padding:'1rem 0.5rem 2rem 0.5rem',display:'flex',flexDirection:'column',gap:'0.5rem',width:'25%',borderRadius:'0.5rem',boxShadow:'5px 5px 10px #888888'}}>
             <h4 style={{textAlign:'center'}}>{el.title}</h4>
             <div style={{display:'flex',justifyContent:'space-between',padding:'0 2rem'}}>
-            <Link style={{textDecoration:'none',color:'green'}} to={`/form/${el._id}`} >view</Link>
+            <Link style={{textDecoration:'none',color:'green'}} to={`/form/${el._id}`} >View</Link>
             <Link style={{textDecoration:'none',color:'blue'}}>Edit</Link>
-            <Link style={{textDecoration:'none',color:'red'}}>Delete</Link>
+            <Link style={{textDecoration:'none',color:'red'}} onClick={() => handleBtn(el._id)} >Delete</Link>
             </div>
           </div>)
         })}
